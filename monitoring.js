@@ -137,47 +137,48 @@ function displayDataInHTML(data) {
    
     $(document).ready(function(){
         $("#myTable").dataTable();
+        $('#User').dataTable( {
+            "order": [],
+            "columnDefs": [ {
+              "targets"  : 'no-sort',
+              "orderable": false,
+            }]
+        });
+        $('#Risk Level').dataTable( {
+            "order": [],
+            "columnDefs": [ {
+              "targets"  : 'no-sort',
+              "orderable": false,
+            }]
+        });
+        $('#Action reason').dataTable( {
+            "order": [],
+            "columnDefs": [ {
+              "targets"  : 'no-sort',
+              "orderable": false,
+            }]
+        });
+        $('#Action taken by').dataTable( {
+            "order": [],
+            "columnDefs": [ {
+              "targets"  : 'no-sort',
+              "orderable": false,
+            }]
+        });
+        $('#Trigger reason').dataTable( {
+            "order": [],
+            "columnDefs": [ {
+              "targets"  : 'no-sort',
+              "orderable": false,
+            }]
+        });
+        $('#Previously reviewed').dataTable( {
+            "order": [],
+            "columnDefs": [ {
+              "targets"  : 'no-sort',
+              "orderable": false,
+            }]
+        });
     });
-    $('#User').dataTable( {
-        "order": [],
-        "columnDefs": [ {
-          "targets"  : 'no-sort',
-          "orderable": false,
-        }]
-    });
-    $('#Risk Level').dataTable( {
-        "order": [],
-        "columnDefs": [ {
-          "targets"  : 'no-sort',
-          "orderable": false,
-        }]
-    });
-    $('#Action reason').dataTable( {
-        "order": [],
-        "columnDefs": [ {
-          "targets"  : 'no-sort',
-          "orderable": false,
-        }]
-    });
-    $('#Action taken by').dataTable( {
-        "order": [],
-        "columnDefs": [ {
-          "targets"  : 'no-sort',
-          "orderable": false,
-        }]
-    });
-    $('#Trigger reason').dataTable( {
-        "order": [],
-        "columnDefs": [ {
-          "targets"  : 'no-sort',
-          "orderable": false,
-        }]
-    });
-    $('#Previously reviewed').dataTable( {
-        "order": [],
-        "columnDefs": [ {
-          "targets"  : 'no-sort',
-          "orderable": false,
-        }]
-    });
+    
 }
