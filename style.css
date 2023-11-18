@@ -1,0 +1,117 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  display: flex; /* Use flex container for the entire body */
+  height: 100vh;
+  
+}
+.main{
+  width:100vw;
+  height:100vh;
+ display: flex;
+}
+/* Left column styles */
+.left-column {
+    flex: 0 0 15%;
+    background-color: #fcfeff;
+    padding: 20px;
+    border: 1px solid black; /* Combine border-width and border-color */
+  }
+/* Right column styles */
+.right-column {
+  flex: 1; /* Take up remaining space */
+  padding: 20px;
+
+}
+
+/* Add more styles as needed */
+.navigation{
+  margin-left:-2vw;
+  margin-top: 30vh;
+  margin-right:2vw;
+  list-style-type: none;
+}
+.single_nav{
+  margin-top: 2vh;
+  padding: 1vh 1vw 1vh 1vw;
+
+  font-size: smaller;
+  text-decoration: none  !important;
+  white-space: nowrap;
+  text-decoration-color:black;
+}
+a{
+  color:black;
+  text-decoration: none;
+}
+.single_nav:hover {
+  background-color: rgb(214, 213, 251); /* Set the background color on hover */
+  border-radius: 5px; 
+}
+.single_nav:hover a {
+  color: rgb(42, 42, 239); /* Set the text color on hover */
+  transition: background-color 0.3s, color 0.3s, border-radius 0.3s;
+}
+@media (max-width: 400px) {
+  body {
+      flex-direction: column; /* Stack columns on small screens */
+  }
+  .left-column,
+  .right-column {
+      flex: 1; /* Take full width on small screens */
+  }
+}
+.bottom-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top:20vh;
+  float:bottom;
+  width:10vw;
+}
+.name{
+  margin-top: 20%;
+  display: flex;
+  flex-direction: column;
+  width: 5vh;
+}
+.name_a{
+  font-size: smaller;
+  margin-top: -50%;
+}
+.profile-logo {
+  width: 3vw; /* Adjust the size as needed */
+  height: 7vh; /* Adjust the size as needed */
+  border-radius: 50%;
+}
+.tabs{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.tab3{
+  margin-left: 50vw;
+}
+.head{
+  font-size: 30px;
+}
+.popup-form-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  justify-content: center;
+  align-items: center;
+}
+
+/* Styles for the pop-up form */
+.popup-form {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}

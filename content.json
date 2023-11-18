@@ -1,0 +1,106 @@
+{
+  
+    "completed": [
+      {
+        "User": {"Name": "John Doe", "email": "ram@gmail.com"},
+        "Risk Level": "Medium",
+        "Action reason": "flagged",
+        "Time to Close": "3 days",
+        "Data added on": "15 Oct, 2023",
+        "Action taken by": {"Name": "ram", "email": "ram@gmail.com"}
+      },
+      {
+        "User": {"Name": "Alice Johnson", "email": "alice@gmail.com"},
+        "Risk Level": "High",
+        "Action reason": "closed",
+        "Time to Close": "4 days",
+        "Data added on": "18 Nov, 2023",
+        "Action taken by": {"Name": "lisa", "email": "lisa@gmail.com"}
+      },
+      {
+        "User": {"Name": "Emily Davis", "email": "emily@gmail.com"},
+        "Risk Level": "Low",
+        "Action reason": "pending",
+        "Time to Close": "2 days",
+        "Data added on": "12 Oct, 2023",
+        "Action taken by": {"Name": "alex", "email": "alex@gmail.com"}
+      },
+      {
+        "User": {"Name": "Chris Smith", "email": "chris@gmail.com"},
+        "Risk Level": "High",
+        "Action reason": "flagged",
+        "Time to Close": "5 days",
+        "Data added on": "20 Nov, 2023",
+        "Action taken by": {"Name": "michael", "email": "michael@gmail.com"}
+      },
+      {
+        "User": {"Name": "Sophia White", "email": "sophia@gmail.com"},
+        "Risk Level": "Medium",
+        "Action reason": "closed",
+        "Time to Close": "4 days",
+        "Data added on": "18 Nov, 2023",
+        "Action taken by": {"Name": "olivia", "email": "olivia@gmail.com"}
+      },
+      {
+        "User": {"Name": "Daniel Brown", "email": "daniel@gmail.com"},
+        "Risk Level": "Low",
+        "Action reason": "flagged",
+        "Time to Close": "3 days",
+        "Data added on": "15 Oct, 2023",
+        "Action taken by": {"Name": "william", "email": "william@gmail.com"}
+      }
+    ],
+    "pending": [
+      {
+        "User": {"Name": "Daniel Brown", "email": "daniel@gmail.com"},
+        "Risk Level": "Medium",
+        "Trigger reason": "IP Change",
+        "In Queue for": "3 days",
+        "Data added on": "14 Oct, 2023",
+        "Previously reviewed": {"status": "No", "date": ""}
+      },
+      {
+        "User": {"Name": "Alice Johnson", "email": "alice@gmail.com"},
+        "Risk Level": "High",
+        "Trigger reason": "System Update",
+        "In Queue for": "2 days",
+        "Data added on": "12 Nov, 2023",
+        "Previously reviewed": {"status": "Yes", "date": "20 Nov, 2023"}
+      },
+      {
+        "User": {"Name": "Sophia White", "email": "sophia@gmail.com"},
+        "Risk Level": "Low",
+        "Trigger reason": "Account Access",
+        "In Queue for": "1 day",
+        "Data added on": "10 Oct, 2023",
+        "Previously reviewed": {"status": "No", "date": ""}
+      },
+      {
+        "User": {"Name": "Chris Smith", "email": "chris@gmail.com"},
+        "Risk Level": "Medium",
+        "Trigger reason": "Profile Update",
+        "In Queue for": "4 days",
+        "Data added on": "16 Oct, 2023",
+        "Previously reviewed": {"status": "Yes", "date": "22 Oct, 2023"}
+      },
+      {
+        "User": {"Name": "Emily Davis", "email": "emily@gmail.com"},
+        "Risk Level": "High",
+        "Trigger reason": "Payment Issue",
+        "In Queue for": "5 days",
+        "Data added on": "18 Nov, 2023",
+        "Previously reviewed": {"status": "No", "date": ""}
+      },
+      {
+        "User": {"Name": "John Doe", "email": "john@gmail.com"},
+        "Risk Level": "Low",
+        "Trigger reason": "Login Activity",
+        "In Queue for": "2 days",
+        "Data added on": "15 Oct, 2023",
+        "Previously reviewed": {"status": "Yes", "date": "21 Oct, 2023"}
+      }
+    ]
+  }
+  
+  
+  

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="js/jquery.js"></script>
+  <script src="media/js/jquery.dataTables.min.js"></script>
+  <link rel="stylesheet" href="media/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="monitoring.js" defer></script>
+</head>
+<body>
+  <div class="main">
+    <div class="left-column">
+      <ul class="navigation">
+        <li class="single_nav"><a href="#">Overview</a></li>
+        <li class="single_nav"><a href="#">Onboarding</a></li>
+        <li class="single_nav"><a href="Monitoring.html">Monitoring</a></li>
+        <li class="single_nav"><a href="#">Flagging</a></li>
+        <li class="single_nav"><a href="#">Source of Income</a></li>
+        <li class="single_nav"><a href="#">UAR</a></li>
+      </ul>
+      <div class="bottom-content">
+        <img src="icons8-customer-48.png" alt="Profile Logo" class="profile-logo">
+       <div class="name"> <p class="name_a"><b>Saurav</b></p>
+        <p class="name_a">saurav@gmail.com</p>
+       </div>
+      </div>
+    </div>
+    <div class="right-column">
+        <div class="head"><p><b>Monitoring</b></p></div>
+       
+            <div class="tabs">
+               <div class="tab1_2">
+                <button onclick="loadData('pending')">Pending</button>
+                <button onclick="loadData('completed')">Completed</button>
+               </div>
+         <div class="tab3">
+            <button class="close-account-button">Close Account</button>
+         </div>
+              </div>
+        <div id="data-container">
+          <!-- Content loaded based on selected tab will appear here -->
+        </div>
+      </div>
+  </div>
+  <div id="popupFormContainer" class="popup-form-container">
+    
+        <div class="popup-form">
+          <!-- Form content goes here -->
+          <form>
+            <!-- Your form fields go here -->
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+    
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+    
+            <button type="submit">Close Account</button>
+          </form>
+    
+          <!-- Close button for the form -->
+          <button id="closeFormButton">Close</button>
+        </div>
+      </div>
+    </body>
+</html>
