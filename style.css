@@ -105,18 +105,22 @@ background-color: transparent;
   border: none;
   background-color: transparent;
   cursor: pointer;
+  font-weight: bold;
+  color:rgba(173, 173, 173, 1);
   transition: border-bottom-color 0.3s; /* Smooth transition for the border color */
 }
 
 .clicked {
   border-bottom: 2px  solid  rgba(70, 67, 238, 1);
+  color:  rgba(70, 67, 238, 1);
 }
 .tab3{
   margin-left: 50vw;
 }
 .solid-line {
-  border-top: 1px solid #000; /* 1px solid black line */
-  margin: 0px 0px 20px ; /* Optional margin for spacing */
+
+  border-top: 2px solid rgba(173, 173, 173, 1); /* 1px solid black line */
+  margin: -2px 0px 20px 0px; /* Optional margin for spacing */
 }
 .head{
   font-size: 30px;
