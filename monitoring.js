@@ -1,27 +1,65 @@
 window.addEventListener('load', loadData('pending'));
-
 document.addEventListener('DOMContentLoaded', function () {
-    // Close Account button
-    const closeAccountButton = document.querySelector('.close-account-button');
-  
-    // Pop-up form container
-    const popupFormContainer = document.getElementById('popupFormContainer');
-  
-    // Close button inside the form
-    const closeFormButton = document.getElementById('closeFormButton');
-   //this is for sorting according to risk level
-  
-  
-    // Show the pop-up form when the Close Account button is clicked
-    closeAccountButton.addEventListener('click', function () {
-      popupFormContainer.style.display = 'flex';
-    });
-    closeFormButton.addEventListener('click', function () {
-      popupFormContainer.style.display = 'none';
-    });
-    
+  const closeAccountButton = document.querySelector('.close-account-button');
+  const popupFormContainer = document.getElementById('popupFormContainer');
+  const closeAccountBtn = document.getElementById('closeAccountBtn');
+  const navigateBackBtn = document.getElementById('navigateBackBtn');
+
+  closeAccountButton.addEventListener('click', function () {
+    popupFormContainer.style.display = 'flex';
   });
+
+  closeAccountBtn.addEventListener('click', function () {
+    // Your form submission logic here
+
+    // For demonstration purposes, let's close the form after submission
+    popupFormContainer.style.display = 'none';
+  });
+
+  navigateBackBtn.addEventListener('click', function () {
+    popupFormContainer.style.display = 'none';
+  });
+
+  // Function to check if all form fields are filled
+  function isFormFilled() {
+    const email = document.getElementById('email').value;
+    const reason = document.getElementById('reason').value;
+    const note = document.getElementById('note').value;
+    const uarYes = document.getElementById('uarYes').checked;
+    const uarNo = document.getElementById('uarNo').checked;
+    const chargeFee = document.getElementById('chargeFee').checked;
   
+    return email !== '' && reason !== '' && note !== '' && (uarYes || uarNo) && chargeFee;
+  }
+  
+
+  // Function to update the button color based on form filling status
+  function updateButtonColor() {
+    closeAccountBtn.style.backgroundColor = isFormFilled() ? 'blue' : '';
+    closeAccountBtn.style.color=isFormFilled() ? 'white' : '';
+  }
+
+  // Add event listeners to form fields for input changes
+  document.getElementById('email').addEventListener('input', updateButtonColor);
+  document.getElementById('reason').addEventListener('input', updateButtonColor);
+  document.getElementById('uarYes').addEventListener('change', updateButtonColor);
+document.getElementById('uarNo').addEventListener('change', updateButtonColor);
+document.getElementById('chargeFee').addEventListener('change', updateButtonColor);
+
+});
+function toggleButton(button, status) {
+  
+  document.querySelectorAll('.pending, .completed').forEach(function (btn) {
+    btn.classList.remove('clicked');
+  });
+
+  // Add the 'clicked' class to the clicked button
+  button.classList.add('clicked');
+
+  // Call your function to load data based on the status (e.g., 'pending' or 'completed')
+  loadData(status);
+}
+
   
 function loadData(tabName) {
     console.log(`Tab selected: ${tabName}`);
@@ -136,8 +174,10 @@ function displayDataInHTML(data) {
     container.appendChild(table);
    
     $(document).ready(function(){
-        $("#myTable").dataTable();
-        $('#User').dataTable( {
+        $("#myTable").dataTable({
+         
+        });
+       /* $('#User').dataTable( {
             "order": [],
             "columnDefs": [ {
               "targets"  : 'no-sort',
@@ -178,7 +218,7 @@ function displayDataInHTML(data) {
               "targets"  : 'no-sort',
               "orderable": false,
             }]
-        });
+        });*/
     });
     
 }

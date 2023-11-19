@@ -33,36 +33,75 @@
        
             <div class="tabs">
                <div class="tab1_2">
-                <button onclick="loadData('pending')">Pending</button>
-                <button onclick="loadData('completed')">Completed</button>
+                <button class ="pending" onclick="toggleButton(this, 'pending')">Pending</button>
+                <button class ="completed" onclick="toggleButton(this, 'completed')">Completed</button>
                </div>
          <div class="tab3">
             <button class="close-account-button">Close Account</button>
          </div>
+         
               </div>
+              <div class="solid-line"></div>
         <div id="data-container">
           <!-- Content loaded based on selected tab will appear here -->
         </div>
       </div>
   </div>
   <div id="popupFormContainer" class="popup-form-container">
-    
-        <div class="popup-form">
-          <!-- Form content goes here -->
-          <form>
-            <!-- Your form fields go here -->
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
-    
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
-    
-            <button type="submit">Close Account</button>
-          </form>
-    
-          <!-- Close button for the form -->
-          <button id="closeFormButton">Close</button>
-        </div>
+    <div class="popup-form">
+      <div class="form-header">
+        <h2>Close account</h2>
+        <button id="navigateBackBtn" class="close-btn">&#10006;</button>
       </div>
+  
+      <form id="closeAccountForm">
+        <!-- Email input -->
+        <div class="form-group">
+          <div><label for="email">Email:</label></div>
+         <div> <input type="email" id="email" name="email" required></div>
+        </div>
+  
+        <!-- UAR radio buttons -->
+        <div class="form-group">
+          <label>Want to file UAR</label>
+          
+            <label for="uarYes">Yes</label>
+            <input type="radio" id="uarYes" name="uar" value="Yes">
+  
+            <label for="uarNo">No</label>
+            <input type="radio" id="uarNo" name="uar" value="No">
+          
+        </div>
+  
+        <!-- Reason dropdown -->
+        <div class="form-group">
+          <div><label for="reason">Reason:</label></div>
+          <div><select id="reason" name="reason" required>
+            <option value="" disabled selected>Select a reason</option>
+            <option value="flagging_logics_triggered">Flagging Logics Triggered</option>
+            <option value="abc">ABC</option>
+            <option value="def">DEF</option>
+            <option value="ghi">GHI</option>
+          </select>
+        </div>
+        </div>
+  
+        <!-- Note input -->
+        <div class="form-group">
+          <label for="note">Note:</label>
+          <input type="text" id="note" name="note">
+        </div>
+  
+        <!-- Charge closure fee checkbox -->
+        <div class="form-group-l">
+          <div><input type="checkbox" id="chargeFee" name="chargeFee">
+          <label for="chargeFee">Charge closure fee:</label></div>
+          <div><button type="button" id="closeAccountBtn">Close Account</button></div>
+        </div>
+      </form>
+    </div>
+  </div>
+  
+  
     </body>
 </html>

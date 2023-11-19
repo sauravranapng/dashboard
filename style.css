@@ -51,7 +51,7 @@ a{
 }
 .single_nav:hover a {
   color: rgb(42, 42, 239); /* Set the text color on hover */
-  transition: background-color 0.3s, color 0.3s, border-radius 0.3s;
+  /*transition: background-color 0.3s, color 0.3s, border-radius 0.3s;*/
 }
 @media (max-width: 400px) {
   body {
@@ -89,9 +89,34 @@ a{
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin-bottom: 0px;
+}
+/* .pending,.completed{
+height:7vh;
+border:none;
+background-color: transparent;
+}
+.pending:active, .completed:active {
+  border-bottom: 2px solid;
+  border-bottom-color:#ff0000;
+} */
+.pending, .completed {
+  height: 7vh;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: border-bottom-color 0.3s; /* Smooth transition for the border color */
+}
+
+.clicked {
+  border-bottom: 2px  solid  rgba(70, 67, 238, 1);
 }
 .tab3{
   margin-left: 50vw;
+}
+.solid-line {
+  border-top: 1px solid #000; /* 1px solid black line */
+  margin: 0px 0px 20px ; /* Optional margin for spacing */
 }
 .head{
   font-size: 30px;
@@ -114,4 +139,70 @@ a{
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width:350px;
+}
+#closeAccountBtn{
+ width:10vw;
+ height: 5vh;
+  padding: 0.5%; 
+  border-radius: 7px;
+  border-width: 0px;
+  color:rgb(176, 176, 176);
+  font-weight:bold;
+}
+.popup-form {
+  padding: 40px; /* Add padding to the form container */
+}
+
+.form-group {
+  margin-bottom: 15px;
+  
+}
+.form-group-l{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+/* Additional styling for better readability */
+.form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 15px;
+}
+
+.close-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #333;
+}
+#note {
+  width: 100%;
+  height:40px; /* You can adjust the width as needed */
+}
+#email{
+  width: 100%;
+  height:20px;
+}
+#reason{
+  width: 100%;
+  height:30px;
+}
+.close-account-button {
+  background-color: #ffdddd; 
+  color: #ff0000; 
+  padding: 10px; 
+  position: relative;
+  border-width: 0;
+  border-radius: 5px;
+ 
+  height: 30px;
+}
+.close-account-button::before {
+  content: '\0029BB'; 
+  
 }
